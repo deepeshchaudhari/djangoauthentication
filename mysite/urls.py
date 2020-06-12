@@ -20,6 +20,8 @@ from mysite.core import views
 urlpatterns = [
     path('',views.home,name="Home" ),
     path('registration/signup/',views.signup,name="SignUp" ),
+    path('secret_page/',views.secret_page,name="secret_page" ),
+    path('secret_page_2/',views.SecretPage.as_view(),name="secret_page_2" ),
     path('admin/', admin.site.urls),
     path('accounts/',include('django.contrib.auth.urls')),
 ]
